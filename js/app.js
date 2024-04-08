@@ -13,9 +13,10 @@ createApp({
                 .then((response) => {
                     // Ottengo la risposta di una mail
                     const result = response.data;
+                    console.log(response.data)
+                    console.log('L\'email è: ' + response.data.response);
                     const email = result.response; // Otteniamo l'email corrente dall'array
                     this.emails.push(email);
-                    console.log(`Email ${email}`); // Stampiamo l'email corrente e il suo indice
                 });
         }
     }
