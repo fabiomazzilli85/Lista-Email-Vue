@@ -1,9 +1,15 @@
 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
 .then(function (response) {
-    const email = response.data;
+    const result = response.data;
 
     console.log(response.data.response);
-});  
+    
+    
+    for (let i = 0; i < 10; i++) {
+        const email =response.data.response; // Otteniamo l'email corrente dall'array
+        console.log(`Email ${i + 1}: ${email}`); // Stampiamo l'email corrente e il suo indice
+      }
+    });
 
 
 // Che cosa ho fatto?
